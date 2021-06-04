@@ -1,13 +1,12 @@
 This folder should contain two models:
 
-\begin{enumerate}
-\item **GoogleNews-vectors-negative300.bin** Model for Word2Vec embedding. It can be upload via:
+1. **GoogleNews-vectors-negative300.bin** Model for Word2Vec embedding. It can be upload via:
 ```python
 wget -c "https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz"
 gzip -d GoogleNews-vectors-negative300.bin.gz
 ```
 
-\item **twitter-roberta-base-emotion** Folder with roBERTa model. It can be upload via:
+2. **twitter-roberta-base-emotion** Folder with roBERTa model. It can be upload via:
 ```python
 git lfs install
 git clone https://huggingface.co/cardiffnlp/twitter-roberta-base-emotion
@@ -20,4 +19,3 @@ with this code:
 ```python 
 MODEL_path_roberta = f"cardiffnlp/twitter-roberta-base-emotion"
 ```
-\end{enumerate}
