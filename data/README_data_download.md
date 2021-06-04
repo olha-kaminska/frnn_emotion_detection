@@ -6,17 +6,17 @@ Data could be upload after registration to competition on the [SemEval webpage](
 
 **Folder structure:** 
 SemEval2018-Task1-all-data/English_EI-oc/
-1. training/
+* training/
   1. EI-oc-En-anger-train.txt
   2. EI-oc-En-joy-train.txt
   3. EI-oc-En-sadness-train.txt
   4. EI-oc-En-fear-train.txt
-2. development/
+* development/
   1. 2018-EI-oc-En-anger-dev.txt
   2. 2018-EI-oc-En-joy-dev.txt
   3. 2018-EI-oc-En-sadness-dev.txt
   4. 2018-EI-oc-En-fear-dev.txt
-3. test-gold/
+* test-gold/
   1. 2018-EI-oc-En-anger-test-gold.txt
   2. 2018-EI-oc-En-joy-test-gold.txt
   3. 2018-EI-oc-En-sadness-test-gold.txt
