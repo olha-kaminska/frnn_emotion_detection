@@ -62,8 +62,9 @@ def transform_data(file_name):
     '''
     This function transform the original dataset provided by competition into a DataFrame
     Input: string with a path to the dataset
-    Output: Pandas DataFrame with columns: index, 'ID' (as string), 'Tweet' (original tweet), 'Cleaned_tweet' (preprocessed tweet),
-            'Cleaned_tweet_wt_stopwords' (preprocessed tweets after stop-words removing), 'Class' (as integer)
+    Output: Pandas DataFrame with columns: index, 'ID' (as string), 'Tweet' (original tweet),
+        'Cleaned_tweet' (preprocessed tweet), 'Cleaned_tweet_wt_stopwords' (preprocessed tweets
+        after stop-words removing), 'Class' (as integer)
     '''
     train_data = pd.read_csv(file_name, sep='\t')
     # Clean the text
