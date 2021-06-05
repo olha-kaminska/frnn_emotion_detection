@@ -59,7 +59,7 @@ def frnn_owa_method(train_data, y, test_data, vector_name, NNeighbours, lower, u
         for j in range(len(train_data[vector_name][train_ind[m]])):
             X[m][j] = train_data[vector_name][train_ind[m]][j]
     vector_size = len(test_data[vector_name][test_ind[0]])
-    X_test = np.zeros((len(test_data), ))
+    X_test = np.zeros((len(test_data), vector_size))
     for k in range(len(test_data)):
         for j in range(vector_size):
             X_test[k][j] = test_data[vector_name][test_ind[k]][j]
