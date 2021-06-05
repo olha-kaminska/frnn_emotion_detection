@@ -52,21 +52,22 @@ def frnn_owa_method(train_data, y, test_data, vector_name, NNeighbours, lower, u
                 aggregation operators possible options: strict(), exponential(), invadd(), mean(), additive()
     Output: conf_scores - the list of confidence scores, y_pred - the list of predicted labels
     '''
-    train_ind = list(train_data.index)
-    test_ind = list(test_data.index)
-    X = np.zeros((len(train_data), len(train_data[vector_name][train_ind[0]])))
-    for m in range(len(train_ind)):
-        for j in range(len(train_data[vector_name][train_ind[m]])):
-            X[m][j] = train_data[vector_name][train_ind[m]][j]
-    vector_size = len(test_data[vector_name][test_ind[0]])
-    X_test = np.zeros((len(test_data), vector_size))
-    for k in range(len(test_data)):
-        for j in range(vector_size):
-            X_test[k][j] = test_data[vector_name][test_ind[k]][j]
+    def create_X(data, vector_name):
+        # Helper function to create matrix X for train and test data
+        indexes = list(data.index)
+        vector_size = len(data[vector_name][indexes[0]])
+        X = np.zeros((len(data), vector_size))
+        for k in range(len(indexes)):
+            for j in range(vector_size):
+                X[k][j] = data[vector_name][indexes[k]][j]
+        return X
+
+    X_train = create_X(train_data, vector_name)
+    X_test = create_X(test_data, vector_name)
     OWA = OWAOperator(NNeighbours)
     nn_search = Cosine()
     clf = FRNN(nn_search=nn_search, upper_weights=upper, lower_weights=lower, lower_k=NNeighbours, upper_k=NNeighbours)
-    cl = clf.construct(X, y)
+    cl = clf.construct(X_train, y)
     # confidence scores
     conf_scores = cl.query(X_test)
     # labels
