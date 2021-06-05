@@ -21,7 +21,7 @@ tokenizer_bert = BertTokenizer.from_pretrained('bert-base-uncased')
 # Upload BERT model
 model_bert = BertModel.from_pretrained('bert-base-uncased', output_hidden_states=True)
 # path to the pre-loaded roBERTa model
-MODEL_path_roberta = r"..\model\twitter-roberta-base-emotion"
+MODEL_path_roberta = r"../model/twitter-roberta-base-emotion"
 tokenizer_roberta = AutoTokenizer.from_pretrained(MODEL_path_roberta)
 # path to the pre-loaded Word2Vec model
 word2vec_model = KeyedVectors.load_word2vec_format('../model/GoogleNews-vectors-negative300.bin', binary=True)
