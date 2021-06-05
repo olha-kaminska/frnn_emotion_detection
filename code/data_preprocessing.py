@@ -46,7 +46,7 @@ def tweet_cleaning(tweet):
                (':o', 'surprise'),
                (':O', 'surprise')]
     for smile in smilies:
-        tweet = tweet.replace(s[0], s[1])
+        tweet = tweet.replace(smile[0], smile[1])
     # transform emojis to their textual descriptions
     new_text = ' '.join([i for k in functools.reduce(operator.concat, [substr.split()
                 for substr in get_emoji_regexp().split(tweet)])
