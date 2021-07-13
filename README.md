@@ -13,6 +13,17 @@ The task is based on [SemEval-2018 Task 1: Affect in Tweets](https://competition
 - The file **Test.ipynb** provides an overview of all function and their usage. It is built as a pipeline describes in the paper with corresponded results. 
 - The file *requirements.txt* contains the list of all necessary packages and versions used with the Python 3.7.4 environment.
 
+<b>Arxiv link<\b> of the paper: https://arxiv.org/abs/2107.05392  
+<b>BibTex citation:<\b>
+ >@misc{kaminska2021fuzzyrough,
+      title={Fuzzy-Rough Nearest Neighbour Approaches for Emotion Detection in Tweets}, 
+      author={Olha Kaminska and Chris Cornelis and Veronique Hoste},
+      year={2021},
+      eprint={2107.05392},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+  
 ### Abstract ###
 *Social media are an essential source of meaningful data used in different tasks such as sentiment analysis and emotion recognition. Mostly, these tasks are solved with deep learning methods. Due to the fuzzy nature of textual data, we consider using classification methods based on fuzzy rough sets.*
 
