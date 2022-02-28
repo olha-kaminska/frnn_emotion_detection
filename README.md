@@ -1,7 +1,5 @@
-## Fuzzy-Rough Nearest Neighbour Approaches for Emotion Detection in Tweets
-Code for the paper written by [Olha Kaminska](https://scholar.google.com/citations?hl=en&user=yRgJkEwAAAAJ), [Chris Cornelis](https://scholar.google.com/citations?hl=en&user=ln46HlkAAAAJ), and [Veronique Hoste](https://scholar.google.com/citations?hl=en&user=WxOsW3IAAAAJ) and presented at [IJCRS 2021](http://ifsa-eusflat2021.eu/ijcrs_conf.html) conference, organized jointly with [IFSA-EUSFLAT 2021](http://ifsa-eusflat2021.eu/). 
-
-The task is based on [SemEval-2018 Task 1: Affect in Tweets](https://competitions.codalab.org/competitions/17751) competition. We chose the ordinal classification Task EI-oc: Detecting Emotion Intensity.
+## LT3 at SemEval-2022 Task 6: Fuzzy-Rough Nearest neighbor Classification for Sarcasm Detection
+Code for the paper written by [Olha Kaminska](https://scholar.google.com/citations?hl=en&user=yRgJkEwAAAAJ), [Chris Cornelis](https://scholar.google.com/citations?hl=en&user=ln46HlkAAAAJ), and [Veronique Hoste](https://scholar.google.com/citations?hl=en&user=WxOsW3IAAAAJ) for [SemEval 2022 - Task 6 (iSarcasmEval):](https://codalab.lisn.upsaclay.fr/competitions/1340) **Intended Sarcasm Detection In English and Arabic**. We participated in the *SubTask A:* Given a text, determine whether it is sarcastic or non-sarcastic.
 
 ### Repository Overview ###
 - The **code** directory contains .py files with different functions:
@@ -10,21 +8,9 @@ The task is based on [SemEval-2018 Task 1: Affect in Tweets](https://competition
   - *tweets_embedding.py* - functions for tweets embeddings with different methods.
 - The **data** directory contains *README_data_download.md* file with instruction on uploading necessary dataset files that should be saved in the *data* folder.
 - The **model** directory contains *README_model_download.md* file with instruction on uploading necessary models that should be saved in the *model* folder.
-- The file **Test.ipynb** provides an overview of all function and their usage. It is built as a pipeline describes in the paper with corresponded results. 
-- The file *requirements.txt* contains the list of all necessary packages and versions used with the Python 3.7.4 environment.
+- The file **iSarcasmEval.ipynb** provides an overview of our pipeline during the problem solving. 
+- The file **test_labels.txt** is the final file with test labels that we provided to the organizers.
+- The file **requirements.txt** contains the list of all necessary packages and versions used with the Python 3.7.4 environment.
 
-<b>Arxiv link</b> of the paper: https://arxiv.org/abs/2107.05392  
-<b>BibTex citation:</b>
- >@misc{kaminska2021fuzzyrough,
-      title={Fuzzy-Rough Nearest Neighbour Approaches for Emotion Detection in Tweets}, 
-      author={Olha Kaminska and Chris Cornelis and Veronique Hoste},
-      year={2021},
-      eprint={2107.05392},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
-}
-  
 ### Abstract ###
-*Social media are an essential source of meaningful data used in different tasks such as sentiment analysis and emotion recognition. Mostly, these tasks are solved with deep learning methods. Due to the fuzzy nature of textual data, we consider using classification methods based on fuzzy rough sets.*
-
-*Specifically, we develop an approach for the SemEval-2018 emotion detection task, based on the fuzzy rough nearest neighbour (FRNN) classifier enhanced with ordered weighted average (OWA) operators. We use tuned ensembles of FRNN-OWA models based on different text embedding methods. Our results are competitive with the best SemEval solutions based on more complicated deep learning methods.*
+*This paper describes the approach developed by the LT3 team in the Intended Sarcasm Detection task at SemEval-2022 Task 6. We considered the binary classification subtask A for English data. The presented system is based on the fuzzy-rough nearest neighbor classification method using various text embedding techniques. Our solution reached 9th place in the official leader-board for English subtask A.*
