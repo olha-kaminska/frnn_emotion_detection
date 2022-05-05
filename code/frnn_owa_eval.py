@@ -181,3 +181,33 @@ def cross_validation_ensemble_owa(df, features_names, class_name, K_fold, k, low
     else:
         print('Wrong evaluation metric was specified! Choose "pcc" or "f1".')
     return res
+    
+
+def cosine_relation(tweet1, tweet2):
+    '''
+    This function calculates cosine similarity between two vectors
+    
+    It uses "numpy" package as "np"
+    
+    Input: tweet1, tweet2 as arrays of numbers
+    Output: float number - cosine similarity between tweet1 and tweet2
+    '''
+    return 0.5 * (1 + np.dot(tweet1, tweet2)/(np.linalg.norm(tweet1)*np.linalg.norm(tweet2)))
+
+
+def get_neigbours(test_vector, df_train_vectors, feature, k, text_column, class_column): 
+    '''
+    This function calculates k neirest neighbours to the test_vector using cosine similarity
+    
+    Input: test_vector - array of numbers
+           df_train_vectors - DataFrame with train instances
+           feature - name of a column in df_train_vectors with texts' embedding vectors
+           k - a number of neirest neighbours 
+           text_column - name of a column in df_train_vectors with texts
+           class_column - name of a column in df_train_vectors with texts' classes
+    Output: list of k neirest neighbours' texts and list with their classes
+    '''
+    distances = df_train_vectors[feature].apply(lambda x: cosine_relation(x, test_vector))
+    top_k = distances.sort_values(ascending=False)[:k]
+    df_top_k = df_train_vectors.loc[top_k.index]
+    return df_top_k[text_column].to_list(), df_top_k[class_column].to_list()
