@@ -1,5 +1,13 @@
 ## Fuzzy Rough Nearest Neighbour Methods for Detecting Emotions, Hate Speech and Irony
-Code for the paper written by [Olha Kaminska](https://scholar.google.com/citations?hl=en&user=yRgJkEwAAAAJ), [Chris Cornelis](https://scholar.google.com/citations?hl=en&user=ln46HlkAAAAJ), and [Veronique Hoste](https://scholar.google.com/citations?hl=en&user=WxOsW3IAAAAJ). 
+Code for the paper written by [Olha Kaminska](https://scholar.google.com/citations?hl=en&user=yRgJkEwAAAAJ), [Chris Cornelis](https://scholar.google.com/citations?hl=en&user=ln46HlkAAAAJ), and [Veronique Hoste](https://scholar.google.com/citations?hl=en&user=WxOsW3IAAAAJ) and sumbitted to the [Information Sciences](https://www.sciencedirect.com/journal/information-sciences) journal. 
+
+This work is an extension of the previous work, where besides **classification** fuzzy-rough-based nearest-neighbours approaches we also considered **regression** methods. Check our other papers [here](https://olha-kaminska.github.io/blog.html).
+
+In this paper we considered such **language classification tasks** as: 
+ - *emotion detection* from <a href="https://competitions.codalab.org/competitions/17751">SemEval-2018 Task 1: Affect in Tweets</a>;
+ - *hate speech detection* from [SemEval 2019 Task 5: Shared Task on Multilingual Detection of Hate](https://competitions.codalab.org/competitions/19935);
+ - *offensive language recognition* from [SemEval 2019 Task 6: OffensEval](https://competitions.codalab.org/competitions/20011) (Identifying and Categorizing Offensive Language in Social Media);
+ - *irony detection* from [SemEval-2018 Task 3: Irony detection in English tweets](https://competitions.codalab.org/competitions/17468).
 
 ### Repository Overview ###
 - The **code** directory contains .py files with different functions:
@@ -13,3 +21,6 @@ Code for the paper written by [Olha Kaminska](https://scholar.google.com/citatio
 
 ### Abstract ###
 *Due to the ever-expanding volumes of information available on social media, the need for reliable and efficient automated text understanding mechanisms becomes evident. Unfortunately, most current approaches rely on black-box solutions rooted in deep learning technologies. In order to provide a more transparent and interpretable framework for extracting intrinsic text characteristics like emotions, hate speech and irony, we propose the integration of fuzzy rough set techniques and text embeddings. We apply our methods to different classification problems originating from Semantic Evaluation (SemEval) competitions, and demonstrate that their accuracy is on par with leading deep learning solutions.*
+
+### BibTeX citation: ###
+*TBA*
