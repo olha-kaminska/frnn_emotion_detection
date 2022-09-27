@@ -14,3 +14,12 @@ Code for the paper written by [Olha Kaminska](https://scholar.google.com/citatio
 
 ### Abstract ###
 *This paper describes the approach developed by the LT3 team in the Intended Sarcasm Detection task at SemEval-2022 Task 6. We considered the binary classification subtask A for English data. The presented system is based on the fuzzy-rough nearest neighbor classification method using various text embedding techniques. Our solution reached 9th place in the official leader-board for English subtask A.*
+
+### BibTeX citation ###
+>@inproceedings{kaminska2022lt3,
+  title={LT3 at SemEval-2022 Task 6: Fuzzy-Rough Nearest Neighbor Classification for Sarcasm Detection},
+  author={Kaminska, Olha and Cornelis, Chris and Hoste, Veronique},
+  booktitle={Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)},
+  pages={987--992},
+  year={2022}
+}
